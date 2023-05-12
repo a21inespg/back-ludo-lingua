@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\GalicianAlphabet;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -13,32 +14,29 @@ class GalicianAlphabetSeeder extends Seeder
      */
     public function run(): void
     {
-        $data= [
-            ['letra' => "a"],
-            ['letra' => "b"],
-            ['letra' => "c"],
-            ['letra' => "d"],
-            ['letra' => "e"],
-            ['letra' => "f"],
-            ['letra' => "g"],
-            ['letra' => "h"],
-            ['letra' => "i"],
-            ['letra' => "l"],
-            ['letra' => "m"],
-            ['letra' => "n"],
-            ['letra' => "ñ"],
-            ['letra' => "o"],
-            ['letra' => "p"],
-            ['letra' => "q"],
-            ['letra' => "r"],
-            ['letra' => "s"],
-            ['letra' => "t"],
-            ['letra' => "u"],
-            ['letra' => "v"],
-            ['letra' => "x"],
-            ['letra' => "z"]
-        ];
 
-        DB::table('galician_alphabets')->insert($data);
+        GalicianAlphabet::create(['letra' => 'a']);
+        GalicianAlphabet::create(['letra' => 'b']);
+        GalicianAlphabet::create(['letra' => 'c']);
+        GalicianAlphabet::create(['letra' => 'd']);
+        GalicianAlphabet::create(['letra' => 'e']);
+        GalicianAlphabet::create(['letra' => 'f']);
+        GalicianAlphabet::create(['letra' => 'g']);
+        GalicianAlphabet::create(['letra' => 'h']);
+        GalicianAlphabet::create(['letra' => 'i']);
+        GalicianAlphabet::create(['letra' => 'l']);
+        GalicianAlphabet::create(['letra' => 'm']);
+        GalicianAlphabet::create(['letra' => 'n']);
+        GalicianAlphabet::create(['letra' => 'ñ']);
+        GalicianAlphabet::create(['letra' => 'o']);
+        GalicianAlphabet::create(['letra' => 'p']);
+        GalicianAlphabet::create(['letra' => 'q']);
+        GalicianAlphabet::create(['letra' => 'r']);
+        GalicianAlphabet::create(['letra' => 's']);
+        GalicianAlphabet::create(['letra' => 't']);
+        GalicianAlphabet::create(['letra' => 'u']);
+        GalicianAlphabet::create(['letra' => 'v']);
+        GalicianAlphabet::create(['letra' => 'x']);
+        GalicianAlphabet::create(['letra' => 'z']);
     }
 }

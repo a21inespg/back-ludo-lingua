@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\GramaticalCathegory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -13,13 +14,9 @@ class GramaticalCathegorySeeder extends Seeder
      */
     public function run(): void
     {
-        $data= [
-            ['name' => "Adxectivo"],
-            ['name' => "Substantivo"],
-            ['name' => "Verbo"]
-           
-        ];
 
-        DB::table('gramatical_cathegories')->insert($data);
+        GramaticalCathegory::create(['name' => 'Adxectivo']);
+        GramaticalCathegory::create(['name' => 'Substantivo']);
+        GramaticalCathegory::create(['name' => 'Verbo']);
     }
 }
