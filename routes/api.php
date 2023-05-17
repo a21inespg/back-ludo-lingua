@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\ZombigramaController;
 use Illuminate\Http\Request;
@@ -25,5 +26,16 @@ Route::get('test', function() {
     return 'succes';
 });
 
+
 Route::apiResource('games', GameController::class);
-Route::apiResource('zombigrama', ZombigramaController::class);
+Route::apiResource('zombigrama', ZombigramaController::class);    
+
+
+
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+
+
+// Route::middleware(['cors'])->group(function () {
+
+//  });
