@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ZombigramaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,13 +31,17 @@ Route::get('test', function() {
 
 Route::apiResource('games', GameController::class);
 Route::apiResource('zombigrama', ZombigramaController::class);    
-
+Route::apiResource('classroom', ClassroomController::class);
+Route::apiResource('student', StudentController::class);
 
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
+Route::post('getuser', [AuthController::class, 'getUser']);
+
 
 
 // Route::middleware(['cors'])->group(function () {
 
 //  });
+

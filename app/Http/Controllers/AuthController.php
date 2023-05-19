@@ -48,5 +48,16 @@ class AuthController extends Controller
         return $user->createToken($request->device_name)->plainTextToken;
     }
 
+    public function getUser(Request $request) {
+        // Fetch the associated token Model
+        $token = \Laravel\Sanctum\PersonalAccessToken::findToken($request->token);
+
+        // Get the assigned user
+        $user = $token->tokenable;
+
+        return response()->json(['user'=>$user]);
+
+    }
+
    
 }
