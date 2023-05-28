@@ -14,7 +14,7 @@ class StudentController extends Controller
     {
         $students=Student::where('classroom_id', '=', $request->id)->get();
          
-        return response()->json(["students"=>$students, "req"=>$request->id]);
+        return response()->json(["students"=>$students, "success"=>true]);
     }
 
     /**
